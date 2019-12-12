@@ -8,6 +8,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class AppComponent {
   //title = 'firebase-demo';
+<<<<<<< HEAD
   courses$;
   course$;
   author$;
@@ -19,4 +20,17 @@ export class AppComponent {
 
   }
 
+=======
+  countries: Observable<Course[]>;
+  constructor(db: AngularFireDatabase)
+  {
+    db.list('/courses').valueChanges().subscribe(
+      courses => {
+        this.courses = courses;
+        console.log(this.courses);
+      }
+    );
+
+  }
+>>>>>>> ff15c2472ee054d5f345189567a9f67b1dfb2587
 }

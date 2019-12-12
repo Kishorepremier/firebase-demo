@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 <ul *ngIf="author$ | async as author">
   <li>{{ author.name }}</li>
   <li>{{ author.students }}</li>
   <li>{{ author.isPremium }}</li>
+=======
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course.$value }}
+  </li>
+>>>>>>> ff15c2472ee054d5f345189567a9f67b1dfb2587
 </ul>
